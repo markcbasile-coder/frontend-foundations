@@ -1,0 +1,77 @@
+:root {
+  /* Page & Layout Colors */
+  --bg-page: #f5efe6;
+  --bg-card: #e8dfd8;
+  --text-main: #1c1917;
+  --text-muted: #57534e;
+
+  /* Button Default State (Slate Blue) */
+  --btn-bg: #2563eb;
+  --btn-text: #ffffff;
+  --btn-border: #1d4ed8;
+
+  /* Button Hover State (Deep Midnight) */
+  --btn-hover-bg: #1e293b;
+  --btn-hover-text: #ffffff;
+  --btn-hover-border: #38bdf8;
+}
+
+*, ::before, ::after {
+
+    margin: 0;
+    padding: 0;
+}
+
+html{
+    font-size: 100%;
+    font-family: Helvetica, Arial, sans-serif;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    box-sizing: border-box;
+    background: var(--bg-page);
+    height: 100vh;
+    width: 100vw;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 2vh auto;
+    padding: 1vh auto;
+}
+
+header {
+    height: 25%;
+    width: 100%;
+}
+
+.card-links {
+    height: 75%;
+    width: 75%;
+    margin-top: 1rem;
+}
+
+.btn {
+    list-style: none;
+    height: 25%;
+    padding: 1rem;
+    border-radius: 25px;
+    border: 2px solid black;
+    margin: 1rem;
+}
+
+img {
+    height: 15rem;
+    width: 15rem;
+    border-radius: 50%;
+    border-color: transparent;
+}
+
+
