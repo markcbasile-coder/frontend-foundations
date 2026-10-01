@@ -17,7 +17,6 @@
 }
 
 *, ::before, ::after {
-
     margin: 0;
     padding: 0;
 }
@@ -43,6 +42,8 @@ body{
     display: flex;
     flex-direction: column;
     align-items: center;
+    background-color: var(--bg-card);
+    border-radius: 10px;
     margin: 2vh auto;
     padding: 1vh auto;
 }
@@ -52,26 +53,52 @@ header {
     width: 100%;
 }
 
+img {
+    margin-top: 1em;
+    height: 15em;
+    width: 15em;
+    border-radius: 50%;
+    border-color: transparent;
+}
+
+.about-me {
+    padding: 1em;
+}
+
+.about-me h1 {
+    color: var(--text-main);
+}
+
+.about-me p {
+    color: var(--text-muted);
+}
+
 .card-links {
     height: 75%;
     width: 75%;
-    margin-top: 1rem;
+    margin-top: 1em;
 }
 
 .btn {
     list-style: none;
     height: 25%;
-    padding: 1rem;
+    padding: 1em;
     border-radius: 25px;
-    border: 2px solid black;
-    margin: 1rem;
+    border: 2px solid var(--btn-border);
+    background-color: var(--btn-bg);
+    margin: 1em;
+    text-decoration: none;
+    font-size: 1.25rem;
+    color: var(--btn-text);
 }
 
-img {
-    height: 15rem;
-    width: 15rem;
-    border-radius: 50%;
-    border-color: transparent;
+.btn:hover {
+    background-color: var(--btn-hover-bg);
+    color: var(--btn-hover-text);
+    border: 2px solid var(--btn-hover-border);
+    height: 85%;
+    width: 85%;
+    box-shadow: -2px 2px 5px 2px gray;
+    translate: 5px;
 }
-
 
