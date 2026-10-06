@@ -1,0 +1,181 @@
+:root {
+    /* ==========================================================================
+     GLOBAL PAGE & BODY STYLES
+     Target elements: body, main, html
+     ========================================================================== */
+    --bg-page: #0f172a;
+    /* Main site background (body) */
+    --text-main: #f8fafc;
+    /* Primary text color for h1, h2, p, labels */
+    --text-muted: #94a3b8;
+    /* #hero-text, subtext, input placeholders */
+    --border-color: #334155;
+    /* Borders for fieldsets, card dividers, header bottom */
+
+    /* ==========================================================================
+     HEADER & NAVIGATION
+     Target elements: header, nav, #nav, .navigation, .nav-links
+     ========================================================================== */
+    --nav-bg: #1e293b;
+    /* Background for fixed/sticky top nav bar */
+    --nav-link: #f8fafc;
+    /* Color for nav bar anchor links */
+    --nav-link-hover: #38bdf8;
+    /* Hover color for nav bar anchor links */
+
+    /* ==========================================================================
+     HERO SECTION
+     Target elements: section.hero, #hero, #hero-text, #hero-image
+     ========================================================================== */
+    --hero-bg: #1e293b;
+    /* Background for hero section container */
+    --hero-title: #38bdf8;
+    /* Accent color for main h1 heading */
+
+    /* ==========================================================================
+     PRICING CARDS & FEATURE GRID
+     Target elements: .price-cards, .plan-card-container, .feature-grid, 
+                      #feature-items, .checklist, #starter, #growth, #bus-pro
+     ========================================================================== */
+    --card-bg: #1e293b;
+    /* Standard background for .price-cards & .feature-grid */
+    --card-title: #38bdf8;
+    /* Color for .card-plan and .chk-list-package text */
+    --card-price: #f8fafc;
+    /* Color for .price text ($699 + $49/month) */
+
+    /* FEATURED CARD HIGHLIGHTS */
+    /* Target elements: .price-cards.featured (Middle "Growth" card) */
+    --featured-card-bg: #1e293b;
+    /* Elevated background for featured pricing card */
+    --featured-border: #0284c7;
+    /* High-contrast border for featured card highlight */
+    --featured-accent: #38bdf8;
+    /* Accent badge or title highlight for featured card */
+
+    /* CHECKLIST STATES */
+    /* Target elements: li.included, li.not-included */
+    --icon-included: #22c55e;
+    /* Green checkmarks or text for .included list items */
+    --icon-not-included: #64748b;
+    /* Muted gray dashes/crosses for .not-included list items */
+
+    /* ==========================================================================
+     SIGN-UP FORM & INPUTS
+     Target elements: form#sign-up, fieldset, legend, input, label
+     ========================================================================== */
+    --form-bg: #1e293b;
+    /* Background for form#sign-up container */
+    --fieldset-bg: #0f172a;
+    /* Inner background for fieldsets */
+    --legend-color: #38bdf8;
+    /* Color for fieldset <legend> titles */
+    --input-bg: #0f172a;
+    /* Background for all text, tel, email inputs */
+    --input-text: #f8fafc;
+    /* Typed text color inside inputs */
+    --input-border: #334155;
+    /* Default border around input fields */
+    --input-focus-border: #38bdf8;
+    /* Border color when input is active/focused */
+
+    /* ==========================================================================
+     BUTTONS & CALLS TO ACTION
+     Target elements: .cta-btn, .btn, button, form submit button
+     ========================================================================== */
+    --btn-bg: #2563eb;
+    /* Default background for CTAs and submit buttons */
+    --btn-text: #ffffff;
+    /* Button text color */
+    --btn-border: #3b82f6;
+    /* Default button border */
+
+    /* HOVER & FOCUS STATES */
+    --btn-hover-bg: #1d4ed8;
+    /* Hover background for buttons */
+    --btn-hover-text: #ffffff;
+    /* Hover text color */
+    --btn-hover-border: #60a5fa;
+    /* Brightened border highlight on hover */
+
+    /* ==========================================================================
+     FOOTER
+     Target elements: footer, .footer-content
+     ========================================================================== */
+    --footer-bg: #0f172a;
+    /* Footer section background */
+    --footer-text: #94a3b8;
+    /* Copyright and description text color */
+}
+
+/*Reset*/
+*,
+::before,
+::after {
+    padding: 0;
+    margin: 0;
+}
+
+html {
+    font-size: 16px;
+    font-family: Helvetica, Arial, sans-serif;
+}
+
+/*main styling*/
+body {
+    margin-top: 9vh;
+    background-color: var(--bg-page);
+    width: 100vw;
+    height: 100vh;
+}
+
+h1,
+h2,
+p,
+label {
+    color: var(--text-main);
+}
+
+#hero-text, 
+input::placeholder {
+    color: var(--text-muted);
+}
+
+fieldset, 
+.plan-card-container,
+.features,
+.feature-grid{
+    border: 2px solid Var(--border-color);
+}
+
+/*Navigation*/
+nav{
+    display: flex;
+    flex-direction: row;
+    position: fixed;
+    justify-content: flex-end;
+    top: 0;
+    left: 0;
+    background-color: var(--nav-bg);
+    width: 100%;
+    height: 10vh;
+    gap: 10px;
+    padding: 2px 5px;
+}
+
+nav ul{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+    overflow: hidden;
+}
+
+nav > ul > li > a{
+    scroll-behavior: smooth;
+}
+
+/*list styling*/
+ul {
+    list-style: none;
+}
