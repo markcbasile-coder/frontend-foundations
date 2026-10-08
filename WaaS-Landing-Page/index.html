@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8>
+    <meta charset="UTF-8">
     <meta name=" description *name of the page*" content="actual short description of the page for SEO">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>WaaS Landing Page</title>
@@ -10,14 +10,25 @@
 </head>
 
 <body>
+    <!--Hidden Nav-->
     <header>
+        <!-- Hidden Checkbox -->
+        <input type="checkbox" id="nav-toggle" class="nav-toggle">
+    
+        <!-- Hamburger Icon (linked to checkbox via 'for') -->
+        <label for="nav-toggle" class="hamburger-btn" aria-label="Toggle Navigation">
+            <span></span>
+            <span></span>
+            <span></span>
+        </label>
+    
+        <!-- Navigation Links -->
         <nav class="navigation" id="nav">
             <ul>
-                <li class="nav-link"><a href="#hero">About Us</a></li>
-                <li class="nav-link"><a href="#pricing">Pricing</a></li>
-                <li class="nav-link"><a href="#features">Features</a></lI>
-                <li class="nav-link"><a href="#sign-up" class="cta-btn">Sign Up</a></li>
-                <li class="nav-link"><a href="#sign-up" class="btn">Sign In</a></li>
+                <li><a href="#hero">About Us</a></li>
+                <li><a href="#pricing">Pricing</a></li>
+                <li><a href="#features">Features</a></li>
+                <li><a href="#sign-up">Sign Up</a></li>
             </ul>
         </nav>
     </header>
@@ -37,114 +48,114 @@
                 <div class="price-cards">
                     <p class="card-plan">Starter</p>
                     <p>One-Time Build + Monthly Maintenance and Hosting Fee<p>
-                    <p class="price">$699 + $49/month<p>
+                    <p class="price">TBD<p>
                 </div>
                 
                 <!--growth card-->
                 <div class="price-cards featured">
                     <p class="card-plan">Growth</p>
                     <p>One-Time Build + Monthly Maintenance and Hosting Fee</p>
-                    <p class="price">$1,299 + $79/month</p>
+                    <p class="price">TBD</p>
                 </div>
 
                 <!--bus-pro card-->
                 <div class="price-cards">
                     <p class="card-plan">Business Pro</p>
                     <p>One-Time Build + Monthly Maintenance and Hosting Fee</p>
-                    <p class="price">$2,199 + $120/month</p>
+                    <p class="price">TBD</p>
                 </div>
             </div>
         </section>
 
         <!--grid section for plan details-->
-        <section class="features">
-            <!--overall grid for the feature checklist-->
-            <div class="feature-grid">
-                <h2>Compare plan features</h2>
-                <!--Sidebar with the features listed-->
-                <div id="feature-items">
-                    <p><strong>Features</strong></p>
-                    <ul class="features">
-                        <!--Starter-->
-                        <li class="features">1–3 Pages (Home, About, Contact)</lI>
-                        <li class="features">Responsive Mobile-Friendly Design</lI>
-                        <li class="features">Contact Form Integration</lI>
-                        <li class="features">Standard Turnaround (1–2 weeks)</lI>
-                        <!--Growth-->
-                        <li class="features">Up to 5–10 Pages + Custom Layouts</lI>
-                        <li class="features">Basic On-Page SEO Setup</lI>
-                        <li class="features">Speed Optimization & Fast Loading</lI>
-                        <li class="features">1 Month Post-Launch Support & Maintenance</lI>
-                        <!--Business Pro-->
-                        <li class="features">Up to 10 Pages + Custom Layouts</li>
-                        <li class="features">Advanced SEO & Google Business Setup</li>
-                        <li class="features">Analytics Integration (Google Analytics / Search Console)</li>
-                        <li class="features">Priority Turnaround & Support</li>
-                    </ul>
-                </div>
-                
-                <!--Checklist for the features included in starter-->
-                <div class="checklist">
-                    <div id="starter">
-                        <p class="chk-list-package">Starter</p>
-                        <ul>
-                            <li class="included"></li>
-                            <li class="included"></li>
-                            <li class="included"></li>
-                            <li class="included"></li>
-                            <li class="not-included"></li>
-                            <li class="not-included"></li>
-                            <li class="not-included"></li>
-                            <li class="not-included"></li>
-                            <li class="not-included"></li>
-                            <li class="not-included"></li>
-                            <li class="not-included"></li>
-                            <li class="not-included"></li>
-                        </ul>
-                    </div>
-                </div>
-
-                <!--Checklist for the features included in growth-->
-                <div class="checklist">
-                    <div id="growth">
-                        <p class="chk-list-package">Growth</p>
-                        <ul>
-                            <li class="included"></li>
-                            <li class="included"></li>
-                            <li class="included"></li>
-                            <li class="included"></li>
-                            <li class="included"></li>
-                            <li class="included"></li>
-                            <li class="included"></li>
-                            <li class="included"></li>
-                            <li class="not-included"></li>
-                            <li class="not-included"></li>
-                            <li class="not-included"></li>
-                            <li class="not-included"></li>
-                        </ul>
-                    </div>
-                </div>
-
-                <!--Checklist for the features included in business pro-->
-                <div class="checklist">
-                    <div id="bus-pro">
-                        <p class="chk-list-package">Business Pro</p>
-                        <ul>
-                            <li class="included"></li>
-                            <li class="included"></li>
-                            <li class="included"></li>
-                            <li class="included"></li>
-                            <li class="included"></li>
-                            <li class="included"></li>
-                            <li class="included"></li>
-                            <li class="included"></li>
-                            <li class="included"></li>
-                            <li class="included"></li>
-                            <li class="included"></li>
-                            <li class="included"></li>
-                        </ul>
-                    </div>
-                </div>
+        <section class="features" id="features">
+            <h2>Compare plan features</h2>
+        
+            <div class="table-wrapper">
+                <table class="comparison-table">
+                    <thead>
+                        <tr>
+                            <th class="feature-col">Features</th>
+                            <th>Starter</th>
+                            <th>Growth</th>
+                            <th>Business Pro</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="feature-name">1–3 Pages (Home, About, Contact)</td>
+                            <td><span class="included"></span></td>
+                            <td><span class="included"></span></td>
+                            <td><span class="included"></span></td>
+                        </tr>
+                        <tr>
+                            <td class="feature-name">Responsive Mobile-Friendly Design</td>
+                            <td><span class="included"></span></td>
+                            <td><span class="included"></span></td>
+                            <td><span class="included"></span></td>
+                        </tr>
+                        <tr>
+                            <td class="feature-name">Contact Form Integration</td>
+                            <td><span class="included"></span></td>
+                            <td><span class="included"></span></td>
+                            <td><span class="included"></span></td>
+                        </tr>
+                        <tr>
+                            <td class="feature-name">Standard Turnaround (1–2 weeks)</td>
+                            <td><span class="included"></span></td>
+                            <td><span class="included"></span></td>
+                            <td><span class="included"></span></td>
+                        </tr>
+                        <tr>
+                            <td class="feature-name">Up to 5–10 Pages + Custom Layouts</td>
+                            <td><span class="not-included"></span></td>
+                            <td><span class="included"></span></td>
+                            <td><span class="included"></span></td>
+                        </tr>
+                        <tr>
+                            <td class="feature-name">Basic On-Page SEO Setup</td>
+                            <td><span class="not-included"></span></td>
+                            <td><span class="included"></span></td>
+                            <td><span class="included"></span></td>
+                        </tr>
+                        <tr>
+                            <td class="feature-name">Speed Optimization & Fast Loading</td>
+                            <td><span class="not-included"></span></td>
+                            <td><span class="included"></span></td>
+                            <td><span class="included"></span></td>
+                        </tr>
+                        <tr>
+                            <td class="feature-name">1 Month Post-Launch Support & Maintenance</td>
+                            <td><span class="not-included"></span></td>
+                            <td><span class="included"></span></td>
+                            <td><span class="included"></span></td>
+                        </tr>
+                        <tr>
+                            <td class="feature-name">Up to 10 Pages + Custom Layouts</td>
+                            <td><span class="not-included"></span></td>
+                            <td><span class="not-included"></span></td>
+                            <td><span class="included"></span></td>
+                        </tr>
+                        <tr>
+                            <td class="feature-name">Advanced SEO & Google Business Setup</td>
+                            <td><span class="not-included"></span></td>
+                            <td><span class="not-included"></span></td>
+                            <td><span class="included"></span></td>
+                        </tr>
+                        <tr>
+                            <td class="feature-name">Analytics Integration (Google Analytics / Search Console)</td>
+                            <td><span class="not-included"></span></td>
+                            <td><span class="not-included"></span></td>
+                            <td><span class="included"></span></td>
+                        </tr>
+                        <tr>
+                            <td class="feature-name">Priority Turnaround & Support</td>
+                            <td><span class="not-included"></span></td>
+                            <td><span class="not-included"></span></td>
+                            <td><span class="included"></span></td>
+                        </tr>
+                    </tbody>
+                </table>
             </div>
         </section>
 
@@ -236,6 +247,10 @@
                         pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
                         placeholder:123-456-7890   
                     />
+                </fieldset>
+                
+                <fieldset class="submit-container">
+                    <button type="submit" name=""submit id="submit">Submit</button>
                 </fieldset>
             </form>
         </section>

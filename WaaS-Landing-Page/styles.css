@@ -16,7 +16,7 @@
      HEADER & NAVIGATION
      Target elements: header, nav, #nav, .navigation, .nav-links
      ========================================================================== */
-    --nav-bg: #1e293b;
+    --nav-bg: #1e293bE6;
     /* Background for fixed/sticky top nav bar */
     --nav-link: #f8fafc;
     /* Color for nav bar anchor links */
@@ -27,7 +27,7 @@
      HERO SECTION
      Target elements: section.hero, #hero, #hero-text, #hero-image
      ========================================================================== */
-    --hero-bg: #1e293b;
+    --hero-bg: #1e293b80;
     /* Background for hero section container */
     --hero-title: #38bdf8;
     /* Accent color for main h1 heading */
@@ -108,25 +108,40 @@
     /* Copyright and description text color */
 }
 
-/*Reset*/
+/* Enhanced Reset - Prevents layout overflow */
 *,
 ::before,
 ::after {
     padding: 0;
     margin: 0;
+    box-sizing: border-box;
 }
 
 html {
     font-size: 16px;
     font-family: Helvetica, Arial, sans-serif;
+    scroll-behavior: smooth;
 }
 
-/*main styling*/
 body {
-    margin-top: 9vh;
+    padding-top: 10vh;
     background-color: var(--bg-page);
     width: 100vw;
-    height: 100vh;
+    min-height: 100vh;
+    overflow: hide;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 60px;
+    background-color: var(--nav-bg);
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+    z-index: 1000;
 }
 
 h1,
@@ -148,34 +163,267 @@ fieldset,
     border: 2px solid Var(--border-color);
 }
 
-/*Navigation*/
-nav{
+/*Navigation -  Hidden Nav*/
+/* 1. Hide the actual checkbox input completely */
+.nav-toggle {
+    display: none;
+}
+
+/* 2. Style the Hamburger Icon Button */
+.hamburger-btn {
+    pointer-events: auto;
     display: flex;
-    flex-direction: row;
-    position: fixed;
-    justify-content: flex-end;
-    top: 0;
-    left: 0;
-    background-color: var(--nav-bg);
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 22px;
+    cursor: pointer;
+    z-index: 1001;
+    position: relative;
+}
+
+/* The 3 visible lines */
+.hamburger-btn span {
+    display: block;
     width: 100%;
-    height: 10vh;
-    gap: 10px;
-    padding: 2px 5px;
+    height: 3px;
+    background-color: var(--text-main);
+    border-radius: 2px;
+    transition: all 0.3s ease;
 }
 
-nav ul{
+/* 3. Off-Canvas Mobile Navigation Setup */
+nav.navigation {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: -280px;
+    width: 280px;
+    max-width: 80vw;
+    height: 100%;
+    min-height: 100vh;
+    min-height: 100dvh;
+    background-color: #1e2638;
+    padding: 80px 24px 30px;
+    transition: left 0.4s ease-in-out;
+    box-shadow: 5px 0 25px rgba(0, 0, 0, 0.5);
+    z-index: 999;
+    box-sizing: border-box;
+    touch-action: pan-y;
+    overscroll-behavior: contain;
+    overflow-y: auto;
+}
+
+/* Link visibility & styling inside the drawer */
+nav.navigation ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
     display: flex;
-    flex-direction: row;
-    align-items: center;
-    gap: 10px;
-    overflow: hidden;
+    flex-direction: column;
+    gap: 24px;
 }
 
-nav > ul > li > a{
-    scroll-behavior: smooth;
+nav.navigation ul li a {
+    color: var(--nav-link);
+    text-decoration: none;
+    font-size: 1.1rem;
+    display: block;
+    padding: 8px 0;
 }
+
+nav.navigation a {
+    color: #ffffff;
+    font-size: 1.1rem;
+    font-weight: 600;
+    text-decoration: none;
+    display: block;
+    transition: opacity 0.2s;
+}
+
+/* Slide active drawer in - Open State */
+.nav-toggle:checked~nav.navigation {
+    left: 0;
+}
+
+nav.navigation ul li a:hover {
+    color: var(--nav-link-hover);
+}
+nav.navigation a:hover {
+    opacity: 0.8;
+}
+/*End Nav Bar*/
+
 
 /*list styling*/
 ul {
     list-style: none;
+}
+
+/*Hero Image*/
+img {
+    max-width: 100vw;
+    width: 500px;
+    margin: 2px auto;
+    z-index: -1;
+}
+
+/*Plan Cards*/
+.plan-card-container {
+    display: flex;
+    flex-direction: row 1fr;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+    width: 100vw;
+    margin: 0 auto;
+}
+
+/* Individual Card Styling */
+.price-cards {
+    background-color: var(--card-bg, #1e293b);
+    border: 1px solid var(--border-color, #334155);
+    border-radius: 8px;
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    transition: 0.2s ease-in-out;
+    min-width: 125px;
+    max-width: 30%;
+}
+
+/* Highlight the middle featured card (Growth) */
+.price-cards.featured {
+    border-color: var(--featured-border, #0284c7);
+    transform: scale(1.03);
+    transition: 0.2s ease-in-out;
+    /* Slightly elevates the middle card */
+}
+
+.price-cards:hover {
+    transform: scale(1.01);
+    box-shadow: 1px 1px 8px 1px whitesmoke;
+    transition: 0.2s ease-in-out;
+}
+
+.price-cards.featured:hover {
+    transform: scale(1.04);
+    box-shadow: 1px 1px 8px 1px gold;
+    transition: 0.2s ease-in-out;
+}
+
+/*Features Grid*/
+/* Checkmark and Cross Icons using ::before pseudo-element */
+span.included::before {
+    content: "✔";
+    color: #22c55e;
+    font-weight: bold;
+}
+
+span.not-included::before {
+    content: "✖";
+    color: #ef4444;
+    font-size: 0.9em;
+}
+
+.table-wrapper {
+    width: 100%;
+    overflow-x: hide;
+    border-radius: 8px;
+    border: 1px solid #334155;
+}
+
+.comparison-table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #1e293b;
+    text-align: center;
+}
+
+.comparison-table thead th {
+    background-color: #0f172a;
+    color: #ffffff;
+    padding: 16px;
+    font-size: 1rem;
+    border-bottom: 2px solid #334155;
+}
+
+.comparison-table th.feature-col {
+    text-align: left;
+    width: 40%;
+}
+
+.comparison-table td {
+    padding: 14px 16px;
+    border-bottom: 1px solid #334155;
+}
+
+.comparison-table td.feature-name {
+    text-align: left;
+    font-size: 0.95rem;
+}
+
+.comparison-table tbody tr:nth-child(even) {
+    background-color: #172033;
+}
+
+
+/*FORM*/
+legend {
+    color: var(--legend-color);
+}
+
+fieldset {
+    margin: 15px auto;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+}
+
+input {
+    background-color: Var(--input-bg);
+    color: var(--input-text);
+    border: 1px solid var(--input-border);
+    margin: 5px 0 5px 0;
+} 
+
+input:focus {
+    border: 1px solid var(--input-focus-border);
+}
+
+#submit {
+    background-color: var(--btn-bg);
+    color: var(--btn-text);
+    border: 1px solid var(btn-border);
+    border-radius: 3px;
+    transition: 0.2s ease-in-out;
+    min-width: 25%;
+    max-width: 33%;
+}
+
+#submit:hover {
+    transform: scale(1.02);
+    transform: translate(-1px, -1px);
+    background-color: var(--btn-bg);
+    color: var(--btn-text);
+    border: 1px solid var(btn-border);
+    border-radius: 3px;
+    box-shadow: 1px 1px 8px 1px whitesmoke;
+    transition: 0.2s ease-in-out;
+}
+
+footer{
+    background-color: var(--footer-bg);
+    color: var(--footer-text);
+    padding: 0 0 5px 5px;
+}
+
+@media screen and (max-width: 576px) {
+    #submit {
+        width: 90%;
+        max-width: 95%;
+        margin: 0 auto;
+    }
 }
