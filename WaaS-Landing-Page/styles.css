@@ -125,20 +125,35 @@ html {
 }
 
 body {
+    padding-top: 70px;
+    /* Use px to cleanly match fixed header height */
+    background-color: var(--bg-page);
     min-height: calc(var(--vh, 1vh) * 100);
+    /* Allows long content to scroll naturally */
+    overflow-x: hidden;
+    /* Prevents side-to-side mobile page wobble */
 }
 
 header {
+    width: 99%;
     position: fixed;
     top: 0;
     left: 0;
-    width: 100%;
     height: 60px;
     background-color: var(--nav-bg);
     display: flex;
     align-items: center;
     padding: 0 20px;
     z-index: 1000;
+/* 1. Force dedicated GPU compositing layer (Prevents Android scroll re-paints) */
+    transform: translate3d(0, 0, 0);
+    -webkit-transform: translate3d(0, 0, 0);
+
+    /* 2. Prevent Android browser address bar gesture capture on header drag */
+    touch-action: none;
+
+    /* 3. Contain layout shifts */
+    contain: layout paint;
 }
 
 h1,
