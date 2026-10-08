@@ -265,13 +265,12 @@
         </div>
     </footer>
     <script>
-        function setViewportHeight() {
-            let vh = window.innerHeight * 0.01;
-            document.documentElement.style.setProperty('--vh', `${vh}px`);
-        }
+        const header = document.querySelector('header');
 
-        setViewportHeight();
-        window.addEventListener('orientationchange', setViewportHeight);
+        window.addEventListener('scroll', () => {
+            // Pins the top offset of the absolute header to the exact scroll position
+            header.style.top = `${window.scrollY}px`;
+        }, { passive: true });
     </script>
 </body>
 

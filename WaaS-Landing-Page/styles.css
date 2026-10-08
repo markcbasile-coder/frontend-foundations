@@ -135,25 +135,20 @@ body {
 }
 
 header {
-    width: 99%;
-    position: fixed;
+    position: absolute;
+    /* Replaces fixed positioning entirely */
     top: 0;
     left: 0;
+    width: 100%;
     height: 60px;
     background-color: var(--nav-bg);
     display: flex;
     align-items: center;
     padding: 0 20px;
     z-index: 1000;
-/* 1. Force dedicated GPU compositing layer (Prevents Android scroll re-paints) */
-    transform: translate3d(0, 0, 0);
-    -webkit-transform: translate3d(0, 0, 0);
 
-    /* 2. Prevent Android browser address bar gesture capture on header drag */
-    touch-action: none;
-
-    /* 3. Contain layout shifts */
-    contain: layout paint;
+    will-change: top;
+    /* Hints to browser engine for smooth position updates */
 }
 
 h1,
