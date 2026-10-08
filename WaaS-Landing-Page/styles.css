@@ -121,6 +121,7 @@ html {
     font-size: 16px;
     font-family: Helvetica, Arial, sans-serif;
     scroll-behavior: smooth;
+    width: 95vw;
 }
 
 body {
@@ -132,7 +133,7 @@ body {
 }
 
 header {
-    position: fixed;
+    position: sticky;
     top: 0;
     left: 0;
     width: 100%;
