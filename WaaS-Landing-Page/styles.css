@@ -145,7 +145,9 @@ header {
     align-items: center;
     padding: 0 20px;
     z-index: 1000;
-    margin-top: 2px;
+    touch-action: none;
+    will-change: transform;
+    transform: translateZ(0);
 }
 
 h1,
@@ -428,12 +430,5 @@ footer{
         width: 90%;
         max-width: 95%;
         margin: 0 auto;
-    }
-
-    /* Removed body { height: 95vh; } which was overriding page scroll */
-    header {
-        position: absolute;
-        top: 0;
-        left: 0;
     }
 }    
