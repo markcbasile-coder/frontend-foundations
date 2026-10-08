@@ -3,7 +3,8 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="WaaS Landing Page" content="MBDS website for web services that I offer including the buildnig of, hosting, and managing websites.">
+    <meta name="WaaS Landing Page"
+        content="MBDS website for web services that I offer including the buildnig of, hosting, and managing websites.">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>WaaS Landing Page</title>
     <link rel="stylesheet" href="./styles.css" />
@@ -14,14 +15,14 @@
     <header>
         <!-- Hidden Checkbox -->
         <input type="checkbox" id="nav-toggle" class="nav-toggle">
-    
+
         <!-- Hamburger Icon (linked to checkbox via 'for') -->
         <label for="nav-toggle" class="hamburger-btn" aria-label="Toggle Navigation">
             <span></span>
             <span></span>
             <span></span>
         </label>
-    
+
         <!-- Navigation Links -->
         <nav class="navigation" id="nav">
             <ul>
@@ -38,7 +39,11 @@
         <section class="hero" id="hero">
             <img src="../MBDS-Logo.png" id="hero-image" />
             <h1>Mark Basile Dev Solutions</h1>
-            <p id="hero-text">Here at Mark Basile Dev Solutions, we supply WaaS (Website As A Service). I can assist you with making a custom website for your business. We will meet, go over details, set up expectations and timelines, go over what we will need from you to make your website as unique as your business, and set up a next meeting time. Before you know it, you will have a one-of-a-kind website to proudly display to your customers.</p>
+            <p id="hero-text">Here at Mark Basile Dev Solutions, we supply WaaS (Website As A Service). I can assist you
+                with making a custom website for your business. We will meet, go over details, set up expectations and
+                timelines, go over what we will need from you to make your website as unique as your business, and set
+                up a next meeting time. Before you know it, you will have a one-of-a-kind website to proudly display to
+                your customers.</p>
         </section>
 
         <!--Button Cards to choose a plan that includes pricing-->
@@ -47,10 +52,12 @@
                 <!--starter card-->
                 <div class="price-cards">
                     <p class="card-plan">Starter</p>
-                    <p>One-Time Build + Monthly Maintenance and Hosting Fee<p>
-                    <p class="price">TBD<p>
+                    <p>One-Time Build + Monthly Maintenance and Hosting Fee
+                    <p>
+                    <p class="price">TBD
+                    <p>
                 </div>
-                
+
                 <!--growth card-->
                 <div class="price-cards featured">
                     <p class="card-plan">Growth</p>
@@ -70,7 +77,7 @@
         <!--grid section for plan details-->
         <section class="features" id="features">
             <h2>Compare plan features</h2>
-        
+
             <div class="table-wrapper">
                 <table class="comparison-table">
                     <thead>
@@ -165,92 +172,42 @@
                 <fieldset class="personal-info">
                     <legend>Peronal Information</legend>
                     <label for="first-name">First Name: </label>
-                    <input 
-                        type="text" 
-                        name="first-name" 
-                        id="first-name"
-                        required
-                    />
-                    
+                    <input type="text" name="first-name" id="first-name" required />
+
                     <label for="last-name">Last Name: </label>
-                    <input 
-                        type="text" 
-                        name="last-name" 
-                        id="last-name" 
-                        required
-                    />
+                    <input type="text" name="last-name" id="last-name" required />
                 </fieldset>
 
                 <fieldset class="personal-contact">
                     <legend>Contact Information</legend>
                     <label for="email">Email: </label>
-                    <input
-                        type="email"
-                        name="email"
-                        id="email"
-                        placeholder="example@domain.com"
-                    />
+                    <input type="email" name="email" id="email" placeholder="example@domain.com" />
                     <label for="personal-tel">Phone Number: </label>
-                    <input 
-                        type="tel" 
-                        id="personal-tel" 
-                        name="personal-tel" 
-                        pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" 
-                        placeholder:123-456-7890 
-                    />
+                    <input type="tel" id="personal-tel" name="personal-tel" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
+                        placeholder:123-456-7890 />
                 </fieldset>
-                
+
                 <fieldset class="business-info">
                     <legend>Business Information *Optional*</legend>
                     <label for="bus-name">Busniess Name: </label>
-                    <input
-                        type="text"
-                        name="bus-name"
-                        id="bus-name"
-                    />
+                    <input type="text" name="bus-name" id="bus-name" />
                     <p>Business Address</p>
                     <label for="street">Street Address: </label>
-                    <input
-                        type="text"
-                        name="street"
-                        id="street"
-                        autocomplete="street-address"
-                        placeholder="123 Main St."
-                    />
+                    <input type="text" name="street" id="street" autocomplete="street-address"
+                        placeholder="123 Main St." />
                     <label for="city">City: </label>
-                    <input
-                        type="text"
-                        name="city"
-                        id="city"
-                        autocomplete="address-level2"
-                    />
+                    <input type="text" name="city" id="city" autocomplete="address-level2" />
                     <label for="state">State: </label>
-                    <input
-                        type="text"
-                        name="state"
-                        id="state"
-                        aucomplete="address-level1"
-                    />
+                    <input type="text" name="state" id="state" aucomplete="address-level1" />
                     <label for="zip">Zip Code: </label>
-                    <input
-                        type="text"
-                        name="zip"
-                        id="zip"
-                        autocomplete="postal-code"
-                        inputmode="numeric"
-                    />
+                    <input type="text" name="zip" id="zip" autocomplete="postal-code" inputmode="numeric" />
                     <label for="bus-tel">Business Telephone Number: </label>
-                    <input 
-                        type="tel"  
-                        id="bus-tel" 
-                        name="bus-tel" 
-                        pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
-                        placeholder:123-456-7890   
-                    />
+                    <input type="tel" id="bus-tel" name="bus-tel" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
+                        placeholder:123-456-7890 />
                 </fieldset>
-                
+
                 <fieldset class="submit-container">
-                    <button type="submit" name=""submit id="submit">Submit</button>
+                    <button type="submit" name="" submit id="submit">Submit</button>
                 </fieldset>
             </form>
         </section>
@@ -264,14 +221,6 @@
             <p>&copy; 2026 Mark Basile Dev Solutions&trade;. All rights reserved.</p>
         </div>
     </footer>
-    <script>
-        const header = document.querySelector('header');
-
-        window.addEventListener('scroll', () => {
-            // Pins the top offset of the absolute header to the exact scroll position
-            header.style.top = `${window.scrollY}px`;
-        }, { passive: true });
-    </script>
 </body>
 
 </html>
