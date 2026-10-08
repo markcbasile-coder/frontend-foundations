@@ -128,12 +128,12 @@ body {
     padding-top: 10vh;
     background-color: var(--bg-page);
     width: 95vw;
-    min-height: 100vh;
+    height: 98vh;
 }
 
 header {
     /*sticky*/
-    position: sticky;
+    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
@@ -213,6 +213,7 @@ nav.navigation {
     touch-action: pan-y;
     overscroll-behavior: contain;
     overflow-y: auto;
+    pointer-events: none;
 }
 
 /* Link visibility & styling inside the drawer */
@@ -245,6 +246,7 @@ nav.navigation a {
 /* Slide active drawer in - Open State */
 .nav-toggle:checked~nav.navigation {
     left: 0;
+    pointer-events: auto;
 }
 
 nav.navigation ul li a:hover {
