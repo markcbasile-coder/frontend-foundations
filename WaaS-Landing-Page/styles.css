@@ -432,7 +432,8 @@ footer{
 
     /* Removed body { height: 95vh; } which was overriding page scroll */
     header {
-        position: fixed;
+        position: absolute;
         top: 0;
+        left: 0;
     }
 }    
