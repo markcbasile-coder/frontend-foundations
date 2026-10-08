@@ -121,14 +121,21 @@ html {
     font-size: 16px;
     font-family: Helvetica, Arial, sans-serif;
     scroll-behavior: smooth;
+    /* Removed width: 95vw */
 }
 
 body {
-    padding-top: 10vh;
+    padding-top: 70px;
+    /* Use px to cleanly match fixed header height */
     background-color: var(--bg-page);
+    min-height: 100vh;
+    /* Allows long content to scroll naturally */
+    overflow-x: hidden;
+    /* Prevents side-to-side mobile page wobble */
 }
 
 header {
+    width: 99%;
     position: fixed;
     top: 0;
     left: 0;
@@ -423,8 +430,9 @@ footer{
         margin: 0 auto;
     }
 
-    header{
+    /* Removed body { height: 95vh; } which was overriding page scroll */
+    header {
         position: fixed;
         top: 0;
     }
-}
+}    
