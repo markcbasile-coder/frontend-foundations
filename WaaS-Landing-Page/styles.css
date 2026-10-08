@@ -129,10 +129,10 @@ body {
     background-color: var(--bg-page);
     width: 95vw;
     min-height: 100vh;
-    overflow: hidden;
 }
 
 header {
+    /*sticky*/
     position: sticky;
     top: 0;
     left: 0;
