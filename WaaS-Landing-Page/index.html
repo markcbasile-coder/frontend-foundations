@@ -264,6 +264,15 @@
             <p>&copy; 2026 Mark Basile Dev Solutions&trade;. All rights reserved.</p>
         </div>
     </footer>
+    <script>
+        function setViewportHeight() {
+            let vh = window.innerHeight * 0.01;
+            document.documentElement.style.setProperty('--vh', `${vh}px`);
+        }
+
+        setViewportHeight();
+        window.addEventListener('orientationchange', setViewportHeight);
+    </script>
 </body>
 
 </html>
