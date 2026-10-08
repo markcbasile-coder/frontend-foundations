@@ -127,7 +127,7 @@ html {
 body {
     padding-top: 10vh;
     background-color: var(--bg-page);
-    width: 95vw;
+    width: 100vw;
     height: 100vh;
 }
 
@@ -319,6 +319,9 @@ img {
 
 /*Features Grid*/
 /* Checkmark and Cross Icons using ::before pseudo-element */
+#features{
+    width: 100vw;
+}
 span.included::before {
     content: "✔";
     color: #22c55e;
@@ -332,7 +335,6 @@ span.not-included::before {
 }
 
 .table-wrapper {
-    width: 100%;
     overflow-x: hide;
     border-radius: 8px;
     border: 1px solid #334155;
@@ -432,11 +434,10 @@ footer{
 
     body{
         height: 95vh;
-        margin-top: 20px;
     }
 
     header{
-        position: sticky;
+        position: fixed;
         top: 0;
     }
 }
