@@ -121,14 +121,14 @@ html {
     font-size: 16px;
     font-family: Helvetica, Arial, sans-serif;
     scroll-behavior: smooth;
-    width: 95vw;
 }
 
 body {
     padding-top: 10vh;
     background-color: var(--bg-page);
     width: 100vw;
-    height: 100vh;
+    min-height: 100vh;
+    overflow: hide;
 }
 
 header {
@@ -142,7 +142,6 @@ header {
     align-items: center;
     padding: 0 20px;
     z-index: 1000;
-    margin-top: 2px;
 }
 
 h1,
@@ -213,7 +212,6 @@ nav.navigation {
     touch-action: pan-y;
     overscroll-behavior: contain;
     overflow-y: auto;
-    pointer-events: none;
 }
 
 /* Link visibility & styling inside the drawer */
@@ -246,7 +244,6 @@ nav.navigation a {
 /* Slide active drawer in - Open State */
 .nav-toggle:checked~nav.navigation {
     left: 0;
-    pointer-events: auto;
 }
 
 nav.navigation ul li a:hover {
@@ -258,6 +255,7 @@ nav.navigation a:hover {
 }
 
 /*End Nav Bar*/
+
 
 /*list styling*/
 ul {
@@ -320,10 +318,6 @@ img {
 
 /*Features Grid*/
 /* Checkmark and Cross Icons using ::before pseudo-element */
-#features {
-    width: 100vw;
-}
-
 span.included::before {
     content: "✔";
     color: #22c55e;
@@ -337,6 +331,7 @@ span.not-included::before {
 }
 
 .table-wrapper {
+    width: 100%;
     overflow-x: hide;
     border-radius: 8px;
     border: 1px solid #334155;
@@ -375,6 +370,7 @@ span.not-included::before {
 .comparison-table tbody tr:nth-child(even) {
     background-color: #172033;
 }
+
 
 /*FORM*/
 legend {
@@ -431,14 +427,5 @@ footer {
         width: 90%;
         max-width: 95%;
         margin: 0 auto;
-    }
-
-    body {
-        height: 95vh;
-    }
-
-    header {
-        position: fixed;
-        top: 0;
     }
 }
