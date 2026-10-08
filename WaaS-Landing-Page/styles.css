@@ -132,7 +132,6 @@ body {
 }
 
 header {
-    /*sticky*/
     position: fixed;
     top: 0;
     left: 0;
@@ -434,5 +433,10 @@ footer{
     body{
         height: 95vh;
         margin-top: 20px;
+    }
+
+    header{
+        position: sticky;
+        top: 0;
     }
 }
