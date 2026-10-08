@@ -128,7 +128,7 @@ body {
     padding-top: 70px;
     /* Use px to cleanly match fixed header height */
     background-color: var(--bg-page);
-    min-height: 100vh;
+    min-height: 100dvh;
     /* Allows long content to scroll naturally */
     overflow-x: hidden;
     /* Prevents side-to-side mobile page wobble */
@@ -145,9 +145,15 @@ header {
     align-items: center;
     padding: 0 20px;
     z-index: 1000;
+/* 1. Force dedicated GPU compositing layer (Prevents Android scroll re-paints) */
+    transform: translate3d(0, 0, 0);
+    -webkit-transform: translate3d(0, 0, 0);
+
+    /* 2. Prevent Android browser address bar gesture capture on header drag */
     touch-action: none;
-    will-change: transform;
-    transform: translateZ(0);
+
+    /* 3. Contain layout shifts */
+    contain: layout paint;
 }
 
 h1,
