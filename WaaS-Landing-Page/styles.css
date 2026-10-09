@@ -463,4 +463,8 @@ footer {
     fieldset {
         width: 100%;
     }
+
+    img {
+        min-width: 200px;
+    }
 }
