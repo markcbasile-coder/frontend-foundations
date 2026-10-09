@@ -123,7 +123,11 @@
     }
 
     input {
-        width: 75%;
+        width: 100%;
+    }
+
+    fieldset {
+        width: 100%;
     }
 }
 
