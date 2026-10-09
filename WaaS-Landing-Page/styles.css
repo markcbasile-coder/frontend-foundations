@@ -117,20 +117,6 @@
     box-sizing: border-box;
 }
 
-@media screen and (max-width: 576px) {
-    body {
-        width: 98vw;
-    }
-
-    input {
-        width: 100%;
-    }
-
-    fieldset {
-        width: 100%;
-    }
-}
-
 html {
     font-size: 16px;
     font-family: Helvetica, Arial, sans-serif;
@@ -287,7 +273,8 @@ Hero Section
     max-width: 1150px;
 }
 img {
-    width: 500px;
+    width: 40%;
+    max-width: 500px;
     margin: 2px auto;
     z-index: -1;
 }
@@ -462,4 +449,18 @@ footer {
     background-color: var(--footer-bg);
     color: var(--footer-text);
     padding: 0 0 5px 5px;
+}
+
+@media screen and (max-width: 576px) {
+    body {
+        width: 98vw;
+    }
+
+    input {
+        width: 100%;
+    }
+
+    fieldset {
+        width: 100%;
+    }
 }
