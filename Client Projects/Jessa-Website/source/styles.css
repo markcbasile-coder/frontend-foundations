@@ -1,0 +1,86 @@
+:root {
+    /* --- Structural & Global Elements --- */
+    --body-bg: #f2ecdc;
+    /* Jessa Logo Palette: Cream[cite: 21] */
+    --body-text: #222222;
+
+    --header-bg: linear-gradient(to right, #ffffff, #211c04);
+    /* Gradient from White to Light Gold[cite: 21] */
+
+    --nav-link-color: #915f27;
+    /* Jessa Logo Palette: Dark Brown[cite: 21] */
+    --nav-link-hover: #b49151;
+    /* Jessa Logo Palette: Medium Gold[cite: 21] */
+
+    --footer-bg: #2c305f;
+    /* Jessa Badge Palette: Deep Navy[cite: 22] */
+    --footer-text: #eaeaea;
+    /* Jessa Badge Palette: Light Gray[cite: 22] */
+
+    /* --- Header & Logo --- */
+    --id-logo-border: #b49151;
+    /* Jessa Logo Palette: Medium Gold[cite: 21] */
+
+    /* --- Hero Section --- */
+    --class-hero-bg: #e8dcac;
+    /* Jessa Logo Palette: Light Gold[cite: 21] */
+    --id-hero-text-h1: #915f27;
+    /* Jessa Logo Palette: Dark Brown[cite: 21] */
+    --id-hero-text-p: #333333;
+
+    /* --- About Section --- */
+    --class-about-bg: #f2ecdc;
+    /* Jessa Logo Palette: Cream[cite: 21] */
+    --id-about-business-h2: #915f27;
+    /* Jessa Logo Palette: Dark Brown[cite: 21] */
+    --id-about-business-text: #444444;
+
+    --id-about-jessa-h2: #915f27;
+    /* Jessa Logo Palette: Dark Brown[cite: 21] */
+    --id-about-jessa-text: #444444;
+
+    /* --- Certification Badge Container --- */
+    --class-cert-bage-container-bg: #eaeaea;
+    /* Jessa Badge Palette: Light Gray[cite: 22] */
+    --class-cert-bage-container-border: #bdbcbe;
+    /* Jessa Badge Palette: Silver[cite: 22] */
+    --class-cert-bage-container-h3: #2c305f;
+    /* Jessa Badge Palette: Deep Navy[cite: 22] */
+
+    /* --- Footer Sections --- */
+    --id-address-text: #d5d4d5;
+    /* Jessa Badge Palette: Off-White[cite: 22] */
+    --id-contact-link: #bdbcbe;
+    /* Jessa Badge Palette: Silver[cite: 22] */
+    --id-legal-text: #939092;
+    /* Jessa Badge Palette: Medium Gray[cite: 22] */
+}
+
+*,
+::before,
+::after {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 18px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    width: 98vw;
+    background-color: var(--body-bg);
+    color: var(--body-text);
+}
+
+header {
+    display: fixed;
+    top: 0;
+    left: 0;
+    background-image: var(--header-bg);
+    height: 75px;
+    width: 100%;
+    z-index: 1001;
+}
