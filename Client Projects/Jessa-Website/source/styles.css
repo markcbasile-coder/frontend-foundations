@@ -153,18 +153,14 @@ HERO SECTION
     background-repeat: none;
     display: flex;
     flex-direction: row;
-    justify-content: space-evenly;
+    justify-content: center;
     align-items: center;
     height: 550px;
     min-width: 98vw;
 }
 
 #hero-image {
-    max-height: 550px;
-    min-height: 250px;
-    max-width: 100%;
-    min-width: 250px;
-    width: 25vw;
+    display: none;
 }
 
 @media screen and (max-width: 567px){
@@ -185,11 +181,8 @@ HERO SECTION
         }
 
     #hero-image {
-            max-height: 550px;
-            min-height: 250px;
-            max-width: 100%;
-            min-width: 250px;
-            width: 50vw;
+            height: 0px;
+            width: 0px;
         }
 }
 
