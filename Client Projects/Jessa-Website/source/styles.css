@@ -29,7 +29,7 @@
     --id-hero-text-p: #ffffff;
 
     /* --- About Section --- */
-    --class-about-bg: #f2ecdc;
+    --class-about-bg: #e7e2d5CC;
     /* Jessa Logo Palette: Cream[cite: 21] */
     --id-about-business-h2: #915f27;
     /* Jessa Logo Palette: Dark Brown[cite: 21] */
@@ -40,11 +40,11 @@
     --id-about-jessa-text: #444444;
 
     /* --- Certification Badge Container --- */
-    --class-cert-bage-container-bg: #eaeaea;
+    --class-cert-badge-container-bg: #eaeaea;
     /* Jessa Badge Palette: Light Gray[cite: 22] */
-    --class-cert-bage-container-border: #bdbcbe;
+    --class-cert-badge-container-border: #b49151;
     /* Jessa Badge Palette: Silver[cite: 22] */
-    --class-cert-bage-container-h3: #2c305f;
+    --class-cert-badge-container-h3: #2c305f;
     /* Jessa Badge Palette: Deep Navy[cite: 22] */
 
     /* --- Footer Sections --- */
@@ -171,4 +171,45 @@ HERO SECTION
 
 #hero-text p {
     color: var(--id-hero-text-p);
+}
+
+/*==============================
+Article
+================================*/
+
+article {
+    padding: 2px;
+    margin-bottom: 50px;
+}
+
+.about {
+    margin-top: 20px;
+    background-color: var(--class-about-bg);
+    color: var(--id-about-business-text);
+}
+
+.about h2 {
+    color: var(--id-about-business-h2);
+}
+
+/*==============================
+Cert Badge
+================================*/
+
+#cert-badge-link {
+    text-decoration: none;
+    color: var(--class-cert-bage-container-h3);
+}
+
+.cert-badge-container {
+    height: 500px;
+    background: var(--class-cert-badge-container-bg);
+    border: 2px solid var(--class-cert-badge-container-border);
+    margin: 0;
+    vertical-align: middle;
+    text-align: center;
+}
+
+.cert-badge-container img {
+    height: 450px;
 }
