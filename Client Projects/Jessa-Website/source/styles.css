@@ -294,4 +294,8 @@ Mobile Device Rules
             height: 1px;
             width: 1px;
         }
+
+        #navigation nav ul li {
+            font-size: 0.8rem;
+        }
 }
