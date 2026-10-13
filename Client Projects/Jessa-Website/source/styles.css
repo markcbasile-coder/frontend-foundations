@@ -161,10 +161,20 @@ HERO SECTION
 
 #hero-image {
     max-height: 550px;
-    min-height: 150px;
+    min-height: 250px;
     max-width: 100%;
-    min-width: 150px;
+    min-width: 250px;
     width: 25vw;
+}
+
+@media screen and (max-width: 567px){
+    #hero-image {
+            max-height: 550px;
+            min-height: 100px;
+            max-width: 100%;
+            min-width: 100px;
+            width: 25vw;
+        }
 }
 
 #hero-text h1{
