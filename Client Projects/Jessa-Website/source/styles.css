@@ -74,7 +74,7 @@ RESET AND DEFAULTS
 }
 
 html {
-    font-size: 18px;
+    font-size: 20px;
     font-family: Arial, Helvetica, sans-serif;
 }
 
@@ -190,7 +190,7 @@ Article
 
 article {
     padding: 2px;
-    margin-bottom: 50px;
+    margin-bottom: 20px;
 }
 
 .about {
@@ -259,7 +259,7 @@ footer a:hover{
 Mobile Device Rules
 ================================*/
 /*====Mobile Font Reset====*/
-html{
+html {
     font-size: 15px;
 }
 
@@ -315,6 +315,7 @@ header {
     #hero-text p {
         margin-top: 10px;
         color: var(--id-hero-text-p);
+        font-size: 1rem;
     }
 
     /*====Mobile Cert Badge====*/
