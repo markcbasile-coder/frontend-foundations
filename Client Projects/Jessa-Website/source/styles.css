@@ -48,12 +48,18 @@
     /* Jessa Badge Palette: Deep Navy[cite: 22] */
 
     /* --- Footer Sections --- */
-    --id-address-text: #d5d4d5;
-    /* Jessa Badge Palette: Off-White[cite: 22] */
-    --id-contact-link: #bdbcbe;
-    /* Jessa Badge Palette: Silver[cite: 22] */
-    --id-legal-text: #939092;
-    /* Jessa Badge Palette: Medium Gray[cite: 22] */
+    --footer-bg: #1a241b;
+        /* Deep Forest Green */
+        --footer-text: #f2ecdc;
+        /* Warm Cream */
+        --id-address-text: #e8dcac;
+        /* Light Gold Accent */
+        --id-contact-link: #b49151;
+        /* Medium Gold */
+        --id-contact-link-hover: #ffffff;
+        /* Crisp White Hover */
+        --id-legal-text: #9eb0a0;
+        /* Muted Sage */
 }
 
 /*==============================
@@ -96,7 +102,7 @@ header {
     align-items: center;
     background-image: var(--header-bg);
     height: 100px;
-    width: 100vw;
+    width: 98.75vw;
     z-index: 1001;
     opacity: 90%;
 
@@ -163,29 +169,6 @@ HERO SECTION
     display: none;
 }
 
-@media screen and (max-width: 567px){
-    .hero {
-            margin: 102px auto 25px;
-            ;
-            border: 2px solid var(--id-logo-border);
-            background-image: url("../Jessa Website Project stuff/JAhrens_Hero_Image.jpeg");
-            background-size: cover;
-            background-position: center;
-            background-repeat: none;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-evenly;
-            align-items: center;
-            height: 550px;
-            min-width: 98vw;
-        }
-
-    #hero-image {
-            height: 0px;
-            width: 0px;
-        }
-}
-
 #hero-text h1{
     color: var(--id-hero-text-h1);
         text-shadow:
@@ -193,10 +176,12 @@ HERO SECTION
                 1px -1px 0 #000,
                 -1px 1px 0 #000,
                 1px 1px 0 #000;
+    font-size: 3rem;
 }
 
 #hero-text p {
     color: var(--id-hero-text-p);
+    font-size: 1.5rem;
 }
 
 /*==============================
@@ -248,15 +233,58 @@ Cert Badge
             width: 25vw;
 }
 
+#cert-badge-title h3{
+    font-size: 1.4rem;
+}
+
+/*==============================
+Footer
+================================*/
+
+footer{
+    background-color: var(--footer-bg);
+}
+
+footer a{
+    color: var(--id-contact-link);
+}
+
+footer a:hover{
+    color: var(--id-contact-link-hover);
+}
+
+
 
 /*==============================
 Mobile Device Rules
 ================================*/
+/*====Mobile Font Reset====*/
+html{
+    font-size: 15px;
+}
 
+/*====Mobile Header====*/
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: row;
+    gap: 75 px;
+    align-items: center;
+    background-image: var(--header-bg);
+    height: 100px;
+    width: 99.75%;
+    z-index: 1001;
+    opacity: 90%;
+
+}
+
+/*====Mobile Hero====*/
 @media screen and (max-width: 567px) {
     .hero {
         margin: 102px auto 25px;
-        ;
         border: 2px solid var(--id-logo-border);
         background-image: url("../Jessa Website Project stuff/JAhrens_Hero_Image.jpeg");
         background-size: cover;
@@ -264,38 +292,53 @@ Mobile Device Rules
         background-repeat: none;
         display: flex;
         flex-direction: column;
-        justify-content: space-evenly;
+        justify-content: center;
         align-items: center;
         height: 550px;
         min-width: 98vw;
     }
 
     #hero-image {
-        height: 0px;
-        width: 0px;
+        display: none;
     }
 
+    #hero-text h1 {
+        color: var(--id-hero-text-h1);
+        text-shadow:
+            -1px -1px 0 #000,
+            1px -1px 0 #000,
+            -1px 1px 0 #000,
+            1px 1px 0 #000;
+        font-size: 1.5rem;
+    }
+
+    #hero-text p {
+        margin-top: 10px;
+        color: var(--id-hero-text-p);
+    }
+
+    /*====Mobile Cert Badge====*/
     .cert-badge-container {
         display: flex;
         flex-direction: column;
-        justify-content: center;
+        justify-content: space-evenly;
         align-items: center;
         height: 250px;
         background: var(--class-cert-badge-container-bg);
         border: 2px solid var(--class-cert-badge-container-border);
-        margin: 0;
+        margin-left: -10px;
         vertical-align: middle;
         text-align: center;
     }
     
-        #cert-badge-img {
-            min-width: 125px;
-            min-height: 125px;
-            height: 1px;
-            width: 1px;
-        }
+    #cert-badge-img {
+        min-width: 125px;
+        min-height: 125px;
+        height: 1px;
+        width: 1px;
+    }
 
-        #navigation nav ul li {
-            font-size: 0.8rem;
-        }
+    .cert-badge-container h3 {
+        font-size: 1.025rem;
+    }
 }
